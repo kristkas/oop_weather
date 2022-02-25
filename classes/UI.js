@@ -6,11 +6,11 @@ class UI{
     }
 
     drawWeather(data) {
-        var celcius = Math.round(parseFloat(data.main.temp)-273.15);
-        var description = data.weather[0].description;
+        let celsius = Math.round(parseFloat(data.main.temp)-273.15);
+        let description = data.weather[0].description;
 
         this.description.innerHTML = description;
-        this.temp.innerHTML = celcius + '&deg; ';
+        this.temp.innerHTML = celsius + '&deg; ';
         this.city.innerHTML = data.name;
     }
 }
